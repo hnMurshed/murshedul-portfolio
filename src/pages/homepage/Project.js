@@ -5,7 +5,7 @@ import CustomLink from '../shared/CustomLink/CustomLink';
 const Project = ({ img, title, description, liveLink, repoLink }) => {
     return (
         <div class="hero">
-            <div class="hero-content flex-col lg:flex-row">
+            <div class="hero-content flex-col lg:flex-row px-0">
                 <div className=" basis-1/2">
                     <img src={img} alt={`${title}`} class="rounded-lg shadow-2xl" />
                 </div>

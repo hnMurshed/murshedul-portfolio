@@ -6,7 +6,7 @@ const About = () => {
         <section className=' py-16' id='about'>
             <div className="custom-container">
                 <div class="hero">
-                    <div class="hero-content flex-col-reverse lg:flex-row gap-8">
+                    <div class="hero-content flex-col-reverse lg:flex-row gap-8 px-0">
                         <img src={murshed} alt="Murshedul Karim" class="max-w-sm rounded-lg" />
                         <div>
                             <h1 class="text-4xl font-bold text-primary">Who is Murshedul?</h1>
