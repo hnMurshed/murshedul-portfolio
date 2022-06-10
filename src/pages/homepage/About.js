@@ -3,7 +3,7 @@ import murshed from '../../images/murshedul.png';
 
 const About = () => {
     return (
-        <section className=' py-16'>
+        <section className=' py-16' id='about'>
             <div className="custom-container">
                 <div class="hero">
                     <div class="hero-content flex-col-reverse lg:flex-row gap-8">

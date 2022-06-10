@@ -4,7 +4,7 @@ import { FaNode, FaReact } from "react-icons/fa";
 
 const Skills = () => {
     return (
-        <section className=' py-16'>
+        <section className=' py-16' id='skills'>
             <h2 className='text-5xl text-center font-bold text-primary'>Skills</h2>
             <div className="custom-container relative">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8 text-[150px] text-primary font-bold py-24">

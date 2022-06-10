@@ -1,7 +1,22 @@
 import React from 'react';
+import { IoIosArrowUp } from "react-icons/io";
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const [scroll, setScroll] = useState(false);
+
+    const changeColor = () => {
+        if (window.scrollY >= 64) {
+            setScroll(true);
+        }
+        else {
+            setScroll(false);
+        }
+    }
+
+    window.addEventListener('scroll', changeColor);
+
     const navMenus = <>
         <li><Link to='/home'>Home</Link></li>
         <li><a href='#about'>About</a></li>
@@ -11,9 +26,9 @@ const Navbar = () => {
         <li><a href='#contact'>Contact</a></li>
     </>
     return (
-        <header>
+        <header className={`${scroll ? 'bg-primary' : 'bg-transparent'} sticky top-0 z-50 duration-300`}>
             <div className="custom-container">
-                <div class="navbar bg-transparent text-white px-0">
+                <div class="navbar text-white px-0">
                     <div class="navbar-start">
                         <div class="dropdown">
                             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -35,6 +50,9 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            {
+                scroll && <a href="#top" className='text-xl hover:bg-primary hover:text-white hover:border-white border-2 border-slate-800 rounded-full p-2 fixed right-5 bottom-5 duration-300'><IoIosArrowUp /></a>
+            }
         </header>
     );
 };

@@ -16,7 +16,7 @@ const Contact = () => {
             });
     }
     return (
-        <section className='py-16'>
+        <section className='py-16' id='contact'>
             <div className="custom-container">
                 <h2 className='text-5xl text-center font-bold text-primary mb-10'>Contact Me</h2>
                 <div className="flex">
@@ -31,16 +31,16 @@ const Contact = () => {
                         <form onSubmit={sendEmail}>
                             <div className="flex flex-col lg:flex-row gap-5 mb-5">
                                 <div className="w-full">
-                                    <label htmlFor="name">Name</label>
-                                    <input type="text" name="name" id="name" placeholder='Johnkar Mahbub' className='w-full border py-2 px-3' />
+                                    <label htmlFor="name">Name*</label>
+                                    <input type="text" name="name" id="name" placeholder='Johnkar Mahbub' className='w-full border py-2 px-3' required />
                                 </div>
                                 <div className="w-full">
-                                    <label htmlFor="email">Email</label>
-                                    <input type="email" name="user-email" id="email" placeholder='example@gmail.com' className='w-full border py-2 px-3' />
+                                    <label htmlFor="email">Email*</label>
+                                    <input type="email" name="user-email" id="email" placeholder='example@gmail.com' className='w-full border py-2 px-3' required />
                                 </div>
                             </div>
-                            <label htmlFor="message">Message</label>
-                            <textarea name="message" id="message" cols="10" rows="8" placeholder='Hey, there!' className='w-full border py-2 px-3'></textarea>
+                            <label htmlFor="message">Message*</label>
+                            <textarea name="message" id="message" cols="10" rows="8" placeholder='Hey, there!' className='w-full border py-2 px-3' required></textarea>
                             <div className="mt-5 text-end">
                                 <CustomLink
                                     isSubmit={true}

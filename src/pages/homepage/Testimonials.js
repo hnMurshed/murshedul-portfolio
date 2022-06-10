@@ -10,7 +10,7 @@ const Testimonials = () => {
             .then(data => setTestimonials(data))
     }, [])
     return (
-        <section className=' py-16'>
+        <section className=' py-16' id='testimonials'>
             <div className="custom-container">
                 <h2 className='text-5xl text-center font-bold text-primary mb-10'>Clients' Valuable Words</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
