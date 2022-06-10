@@ -1,10 +1,19 @@
 import React from 'react';
 import { FaHandshake } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
 import CustomLink from '../shared/CustomLink/CustomLink';
 
 const Contact = () => {
-    const handleSubmit = e => {
+    const sendEmail = e => {
+        e.preventDefault();
 
+        emailjs.sendForm('service_4elbrwp', 'template_w24q37n', e.target, 'dUubrpR687g_uWeFM')
+            .then((result) => {
+                console.log(result.text);
+                e.target.reset();
+            }, (error) => {
+                console.log(error.text);
+            });
     }
     return (
         <section className='py-16'>
@@ -19,7 +28,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className=" basis-2/3 shadow-xl rounded-lg px-6 py-10">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={sendEmail}>
                             <div className="flex flex-col lg:flex-row gap-5 mb-5">
                                 <div className="w-full">
                                     <label htmlFor="name">Name</label>
