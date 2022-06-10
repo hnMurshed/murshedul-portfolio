@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub } from "react-icons/fa";
 import CustomLink from '../shared/CustomLink/CustomLink';
 
-const Project = ({title, description, liveLink, repoLink }) => {
+const Project = ({ title, description, liveLink, repoLink }) => {
     return (
         <div class="hero">
             <div class="hero-content flex-col lg:flex-row">
@@ -13,7 +13,10 @@ const Project = ({title, description, liveLink, repoLink }) => {
                     <h1 class="text-4xl font-bold">{title}</h1>
                     <p class="py-6">{description}</p>
                     <div className="flex items-center gap-3">
-                        <CustomLink href={liveLink}>Live View</CustomLink>
+                        <CustomLink
+                            href={liveLink}
+                            isAnchor={true}
+                        >Live View</CustomLink>
                         <a href={repoLink} target='_blank' rel='noreferrer'><FaGithub className='text-4xl' /></a>
                     </div>
                 </div>
