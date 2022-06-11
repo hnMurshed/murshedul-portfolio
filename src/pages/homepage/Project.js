@@ -7,7 +7,7 @@ const Project = ({ img, title, description, liveLink, repoLink }) => {
         <div class="hero">
             <div class="hero-content flex-col lg:flex-row px-0">
                 <div className=" basis-1/2">
-                    <img src={img} alt={`${title}`} class="rounded-lg shadow-2xl" />
+                    <img src={img} alt={`${title}`} class="w-full rounded-lg shadow-2xl" />
                 </div>
                 <div className=' basis-1/2'>
                     <h1 class="text-4xl font-bold">{title}</h1>

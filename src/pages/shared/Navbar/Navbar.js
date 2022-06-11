@@ -30,7 +30,7 @@ const Navbar = () => {
         <li><a href='#contact'>Contact</a></li>
     </>
     return (
-        <header className={`${scroll ? 'bg-primary' : 'bg-transparent'} sticky top-0 z-50 duration-300`}>
+        <header className={`${scroll ? 'bg-primary' : 'bg-transparent'} sticky top-0 z-50 duration-500`}>
             <div className="relative">
                 <div className="custom-container">
                     <div class="navbar text-white px-0">
